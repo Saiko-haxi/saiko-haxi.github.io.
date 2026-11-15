@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: #08090d;
+}
+
+#interruptor {
+    position: relative;
+    width: 160px;
+    height: 80px;
+    padding: 0; 
+    border: 3px solid #838bad;
+    border-radius: 50px;
+    background: #050508;
+    cursor: pointer;
+}
+
+#interruptor:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 6px; 
+}
+
+.personagem {
+    position: absolute;
+    left: 3px;
+    bottom: 3px;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: #087fff;
+    color: white;
+    display: grid;
+    place-items: center;
+}
+
+/*posição e cor de chegada */
+#interruptor[aria-pressed="true"] .personagem {
+    transform: translateX(80px);
+    background: white;
+    color: #111;
+}    
+
+.rosto,
+.perna {
+    opacity: 0;
+}
+
+.rosto {
+    font: bold 16px Arial, sans-serif;
+}
+
+.perna {
+    position: absolute;
+    top: 98%;
+    width: 3px;
+    height: 24px;
+    background: white;
+    transform-origin: top;
+}
+
+/*o pezinho da ponta de cada perna*/
+.perna::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 9px;
+    height: 3px;
+    border-radius: 3px;
+    background: white;
+}
+
+.esquerda {
+    left: 24px;
+}
+
+.direita {
+    right: 24px;
+}
+
+/* o js adiciona essa classe enquanto a bolinha atravessa*/
+.andando .rosto,
+.andando .perna {
+    opacity: 1;
+}
+
+.andando .perna {
+    animation: passo 220ms ease-in-out infinite alternate;
+}
+
+.andando .direita {
+    animation-direction: alternate-reverse; 
+}
+
+@keyframes passo {
+    from { transform: rotate(-22deg); }
+    to { transform: rotate(22deg); }
+}
