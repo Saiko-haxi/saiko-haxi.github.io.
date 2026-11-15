@@ -1,0 +1,114 @@
+:root {
+    --fundo: #09090b;
+    --texto: #eee8df;
+    --cinza: #b4aaa8;
+    --vermelho: #e95054;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: grid;
+    align-items: center;
+    color: var(--texto);
+    font-family: arial, sans-serif;
+    background-color: var(--fundo);
+
+    background-image: 
+        radial-gradient(ellipse at 12% 8%, #401218 0%, transparent 52%),
+        linear-gradient(130deg, #141013, #070709 75%);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent 3px,
+        rgb(0 0 0 / 12%) 3px,
+        rgb(0 0 0 / 12%) 4px
+    );
+}
+
+main {
+    position: relative;
+    width: min(880px, 88%);
+    margin: 0 auto;
+    padding: clamp(48px, 8vh, 96px) 0;
+}
+
+h1 {
+    margin: 0;
+    max-width: 100%;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(3rem, 8vw, 7rem );
+    line-height: 1;
+    letter-spacing: -0.055em;
+    text-shadow: -3px 2px 0 #751c29;
+}
+
+main > p {
+    margin: 18px 0 0; 
+    max-width: 48ch;
+    color: var(--cinza);
+    line-height: 1.6;
+}
+
+h2 {
+    margin: 48px 0 16px;
+    color: var(--vermelho);
+    font: bold 0.8rem "Curier New", monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid #543136;
+}
+
+li a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 64px;
+    padding: 14px 12px;
+    color: var(--texto);
+    text-decoration: none;
+    font: bold clamp(1rem, 2.5vw, 1.35rem) "Courier New", monospace;
+    transition: background-color 180ms, padding-left 180ms; 
+}
+
+li a::before {
+    content: "▸";
+    color: var(--vermelho);
+    opacity: 0;
+    transition: opacity 180ms;
+}
+
+li a:hover,
+li a:focus-visible {
+    padding-left: 22px;
+    background-color: #32171c;
+}
+
+li a:hover::before,
+li a:focus-visible::before {
+    opacity: 1;
+}
+
+li a:focus-visible {
+    outline: 2px solid var(--vermelho);
+    outline-offset: -2px;
+}
+
