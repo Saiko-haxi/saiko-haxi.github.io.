@@ -1,23 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt-Br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Portifólio</title>
+    <title>pisca-pisca</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
-        <h1>Meu portfólio</h1>
-        <p>Animações que desenvolvi estudando HTML, CSS e JavaScript.</p>
+        <h1>Feliz Natal!</h1>
 
-        <h2>Meus projetos</h2>
-        <ul>
-            <li><a href="./esefera-de-particulas/index.html">Esfera de partículas</a></li>
-            <li><a href="./interruptor/index.html">Interruptor animado</a></li>
-            <li><a href="./pac-man-de-chocolate/index.html">Pac-Man de chocolate</a></li>
-            <li><a href="./pisca-pisca/index.html">Pisca-pisca de Natal</a></li>
-            <li><a href="./particulas/index.html">Partículas interativas</a></li>
-        </ul>
+        <div class="fio" aria-hidden="true">
+            <span class="lampada" style="--cor: #ff4141"></span>
+            <span class="lampada" style="--cor: #53ff80"></span>
+            <span class="lampada" style="--cor: #ffbf36"></span>
+            <span class="lampada" style="--cor: #6495ff"></span>
+            <span class="lampada" style="--cor: #ffffff"></span>
+        </div>
+
+        <button id="interruptor" type="button">Acender Luzes</button>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
