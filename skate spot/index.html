@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skate spot | Encontre seu proximo rolê</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="barra">
+        <a class="logo" href="./index.html">SKATE<span>SPOT</span></a>
+        <a class="portfolio" href="https://saiko-haxi-portfolio.vercel.app">
+            Meu portfólio ↗
+        </a>
+    </header>
+
+    <main>
+        <section class="apresentacao">
+            <p class="categoria">Pistas e lugares para andar</p>
+            <h1>Seu próximo<br>rolê começa aqui.</h1>
+            <p class="descricao">
+                Explore os spots, escolha seu nível e guarde seus favoritos.
+            </p>
+        </section>
+
+        <section aria-label="Catálogo de spots">
+            <div class="filtros">
+                <div class="campo busca">
+                    <label for="busca">Buscar spot ou cidade</label>
+                    <input
+                        id="busca"
+                        type="search"
+                        placeholder="Digite um nome..."
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="nivel">Dificuldade</label>
+                    <select id="nivel">
+                        <option value="todos">Todos os níveis</option>
+                        <option value="iniciante">Iniciante</option>
+                        <option value="intermediario">Intermediário</option>
+                        <option value="avancado">Avançado</option>
+                    </select>
+                </div>
+
+                <button id="filtro-favoritos" type="button" aria-pressed="false">
+                    Só favoritos
+                </button>
+            </div>
+
+            <p class="aviso">
+                Catálogo demonstrativo com locais fictícios.
+            </p>
+
+            <p id="resultado" role="status"></p>
+            <div id="lista-spots" class="lista-spots"></div>
+
+            <p id="vazio" class="vazio" hidden>
+                Nenhum spot encontrado. Experimente mudar os filtros.
+            </p>
+
+            <p id="mensagem" role="status"></p>
+        </section>
+    </main>
+
+    <footer>Desenvolvido por Kaiky Z Silva</footer>
+
+    <template id="modelo-spot">
+        <article class="spot">
+            <div class="spot-topo">
+                <span class="tipo"></span>
+                <button class="favoritar" type="button" aria-pressed="false">
+                    ♡
+                </button>
+            </div>
+
+            <h2></h2>
+            <p class="local"></p>
+            <p class="resumo"></p>
+
+            <div class="detalhes">
+                <span class="nivel"></span>
+                <span class="acesso"></span>
+            </div>
+        </article>
+    </template>
+</body>
+</html>
