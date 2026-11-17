@@ -112,3 +112,81 @@ li a:focus-visible {
     outline-offset: -2px;
 }
 
+.capa-arte {
+    display: block;
+    width: 100%;
+    height: auto; 
+    opacity: 0.85;
+    mix-blend-mode: screen;
+}
+
+/* Apresentação: texto à esquerda e ilustração à direita */
+.capa {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(180px, 30%);
+    align-items: center;
+    gap: 32px;
+}
+
+.sobre .area {
+    margin: 0 0 12px;
+    color: var(--vermelho);
+    font: bold 0.8rem "Courier New", monospace;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.sobre h1 {
+    font-size: clamp(3rem, 7vw, 5.5rem);
+}
+
+.sobre p:not(.area),
+.tecnologia p {
+    color: var(--cinza);
+    line-height: 1.65;
+}
+
+.sobre p:not(.area) {
+    max-width: 55ch;
+    margin: 16px 0 0;
+}
+
+/* As tecnologias ficam lado a lado quando há espaço. */
+.tecnologias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
+    gap: 24px;
+}
+
+.tecnologia {
+    padding: 20px 0 0;
+    border-top: 1px solid #543136;
+}
+
+.tecnologia img {
+    display: block;
+    object-fit: contain;
+}
+
+.tecnologia h3 {
+    margin: 14px 0 6px;
+    font: bold 1.2rem "Courier New", monospace;
+}
+
+.tecnologia p {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .capa {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .capa-arte {
+        grid-row: 1;
+        width: min(44vw, 170px);
+        justify-self: end;
+    }
+}
+

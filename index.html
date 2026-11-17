@@ -1,24 +1,84 @@
 <!DOCTYPE html>
-<html lang="pt-Br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Portifólio</title>
-    <link rel="stylesheet" href="portifolio.css">
+    <title>Kaiky Z Silva | Portfólio front-end</title>
+    <link rel="stylesheet" href="./portifolio.css">
 </head>
 <body>
     <main>
-        <h1>Meu portfólio</h1>
-        <p>Animações que desenvolvi estudando HTML, CSS e JavaScript.</p>
+        <header class="capa">
+            <div class="sobre">
+                <p class="area">Desenvolvimento front-end</p>
+                <h1>Kaiky Z Silva</h1>
 
-        <h2>Meus projetos</h2>
-        <ul>
-            <li><a href="./esefera-de-particulas/index.html">Esfera de partículas</a></li>
-            <li><a href="./interruptor/index.html">Interruptor animado</a></li>
-            <li><a href="./pac-man-chocolate/index.html">Pac-Man de chocolate</a></li>
-            <li><a href="./pisca-pisca/index.html">Pisca-pisca de Natal</a></li>
-            <li><a href="./particulas/index.html">Partículas interativas</a></li>
-        </ul>
+                <p>
+                    Tenho 16 anos, sou do interior de São Paulo e estudo
+                    programação por conta própria há cerca de quatro meses.
+                    Gosto de descobrir como os efeitos que vejo na tela
+                    são feitos e tentar recriá-los do meu jeito.
+                </p>
+
+                <p>
+                    Comecei montando páginas com HTML e CSS. Agora estou
+                    aprendendo a dar movimento a elas com JavaScript.
+                    Dois exemplos aqui do portfólio são o interruptor que
+                    ganha pernas e as partículas que se espalham quando
+                    você passa o mouse.
+                </p>
+            </div>
+
+           
+        </header>
+
+        <section aria-labelledby="titulo-tecnologias">
+            <h2 id="titulo-tecnologias">O que estou aprendendo</h2>
+
+            <div class="tecnologias">
+                <article class="tecnologia">
+                    <img src="html.svg" alt="" width="42" height="46">
+                    <h3>HTML</h3>
+                    <p>
+                        Organizo páginas com títulos, seções e links.
+                        Na minha página de login, usei formulários
+                        com campos de e-mail e senha.
+                    </p>
+                </article>
+
+                <article class="tecnologia">
+                    <img src="css.svg" alt="" width="42" height="46">
+                    <h3>CSS</h3>
+                    <p>
+                        Pratico layouts que se adaptam ao celular e efeitos
+                        de luz. No pisca-pisca de Natal, usei sombras para
+                        dar brilho às lâmpadas e animação para fazer a neve cair.
+                    </p>
+                </article>
+
+                <article class="tecnologia">
+                    <img src="js.svg" alt="" width="42" height="46">
+                    <h3>JavaScript</h3>
+                    <p>
+                        Uso eventos para responder a cliques e movimentos
+                        do mouse. Com o Canvas, estou aprendendo a desenhar
+                        partículas e mudar a posição delas a cada quadro.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section aria-labelledby="titulo-projetos">
+            <h2 id="titulo-projetos">Meus projetos</h2>
+
+            <ul>
+                <li><a href="./esefera-de-particulas/index.html">Esfera de partículas</a></li>
+                <li><a href="./interruptor/index.html">Interruptor animado</a></li>
+                <li><a href="./pac-man-chocolate/index.html">Pac-Man de chocolate</a></li>
+                <li><a href="./pisca-pisca/index.html">Pisca-pisca de Natal</a></li>
+                <li><a href="./particulas/index.html">Partículas interativas</a></li>
+            </ul>
+        </section>
     </main>
 </body>
 </html>
