@@ -1,0 +1,200 @@
+:root {
+    --fundo: #0c0b0e;
+    --cartao: #181518;
+    --campo: #100e11;
+    --texto: #f4eee8;
+    --cinza: #bbb0b3;
+    --borda: #51434a;
+    --destaque: #ff8585;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+    padding: 24px 16px;
+    font-family: Arial, sans-serif;
+    color: var(--texto);
+    background: radial-gradient(ellipse at 20% 15%, #3b1922, transparent 52%), var(--fundo);
+}
+
+.cartao {
+    width: min(100%, 430px);
+    padding: clamp(24px, 5vw, 42px);
+    background: var(--cartao);
+    border: 1px solid var(--borda);
+    border-top: 3px solid var(--destaque);
+    border-radius: 18px;
+    box-shadow: 0 24px 70px rgb(0 0 0 / 45%);
+}
+
+.assinatura {
+    margin: 0;
+    color: var(destaque);
+    font: bold 0.78rem "Curier New", monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.14rem;
+}
+
+h1 {
+    margin: 12px 0 8px;
+    font: bold 3.4rem/1 Georgia, serif;
+    letter-spacing: -0.05rem;
+}
+
+.descricao,
+    #mensagem {
+        color: var(--cinza);
+        font-size: 0.93rem;
+        line-height: 1.5;
+    }
+
+.descricao {
+    margin-bottom: 18px;
+}
+
+.campo input {
+    width: 100%;
+    padding: 14px;
+    color: var(--texto);
+    background: var(--campo);
+    border: 1px solid var(--borda);
+    border-radius: 9px;
+    font: inherit;
+    transition: border-color 160ms, box-shadow 160ms;
+}
+
+.campo input[aria-invalid="true"] {
+    border-color: var(--destaque);
+}
+
+.campo-senha {
+        position: relative;
+}
+
+.campo-senha input {
+    padding-right: 86px;
+}
+
+button,
+a {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+#mostrar-senha, 
+#recuperar {
+    color: var(--destaque);
+    background: transparent;
+    border: 0;
+    font-size: 0.88rem;
+}
+
+#mostrar-senha {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    padding: 8px;
+}
+
+.opcoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 22px; 
+}
+
+.lembrar {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--cinza);
+    font-size: 0.88rem;
+    cursor: pointer;
+}
+
+.lembrar input {
+    margin: 0;
+    accent-color: var(--destaque);
+}
+
+.entrar {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    background: var(--destaque);
+    color: #261015;
+    font-weight: bold;
+    transition: transform 160ms, background-color 160ms, box-shadow 160ms;
+}
+
+.entrar:hover {
+    transform: translateY(-2px);
+    background: #ffaaaa;
+    box-shadow: 0 6px 18px rgb(255 110 120 / 22%);
+}
+
+.entrar:active {
+    transform: translateY(0);
+}
+
+.erro {
+    display: block;
+    margin-top: 6px;
+    color: #ffabab;
+}
+
+.erro:empty,
+#mensagem:empty {
+    margin: 0;
+}
+
+footer {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--borda); 
+}
+
+footer a {
+    color: var(--cinza);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+footer a:hover,
+#recuperar:hover,
+#mostrar-senha:hover {
+    color: var(--texto);
+    text-decoration: underline;
+}
+
+button:focus-visible,
+a:focus-visible,
+.lembrar input:focus-visible {
+    outline: 2px solid var(--destaque);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .entrar,
+    .campo input {
+        transition: none;
+    }
+
+    .entrar:hover {
+        transform: none;
+    }
+}

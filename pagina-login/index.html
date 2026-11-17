@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Kaiky Smooke</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="cartao">
+        <header>
+            <p class="assinatura">Kaiky Smooke</p>
+            <h1>Entrar</h1>
+            <p class="descricao">Use um E-mail de exemplo para testar o fromulario.</p>
+        </header>
+
+        <form id="form-login" novalidate>
+            <div class="campo">
+            <label for="email">E-mail</label>
+            <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Você@exemplo.com"
+                autocomplete="username"
+                aria-describedby="erro-email"
+                required
+            >
+            <small class="erro" id="erro-email"></small>
+            </div>
+
+            <div class="campo">
+                <label for="senha">Senha</label>
+
+                <div class="campo-senha">
+                    <input
+                        id="senha"
+                        name="senha"
+                        type="password"
+                        placeholder="Digite uma senha de teste"
+                        aria-describedby="erro-senha"
+                        required
+                    >
+                    <button type="button" id="mostrar-senha" aria-comtrols="senha">
+                        Mostrar
+                    </button>
+                </div>
+                    <small class="erro" id="erro-senha"></small>
+            </div>
+
+            <div class="opcoes">
+                <label class="lembrar">
+                    <input type="checkbox" id="lembrar">
+                    Lembrar de mim, Esta opção não ira lembrar de Você,
+                    Mas se estiver carente Tudo bem :)
+
+                </label>
+
+                <button type="button" id="recuperar">Esqueci a senha</button>
+            </div>
+
+            <button type="submit" class="entrar">Entrar</button>
+            <p id="mensagem" role="status"></p>
+        </form>
+
+        <footer>
+            <a href="https://saiko-haxi-portfolio.vercel.app">
+                ← Voltar ao portfólio
+            </a>
+        </footer>
+    </main>
+</body>
+</html>
